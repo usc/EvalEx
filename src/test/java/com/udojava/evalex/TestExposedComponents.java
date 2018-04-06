@@ -51,7 +51,6 @@ public class TestExposedComponents {
         Assert.assertEquals("Function list should have one more function declared", expression.getDeclaredFunctions().size(), originalFunctionCount + 1);
     }
 
-
     @Test(expected = RuntimeException.class)
     public void testUnmodifiableFunctionList() {
         Expression expression = new Expression("c+d");
@@ -63,6 +62,7 @@ public class TestExposedComponents {
         Expression expression = new Expression("c+d");
         expression.getDeclaredOperators().add("$$$");
     }
+
     @Test(expected = RuntimeException.class)
     public void testUnmodifiableVariableList() {
         Expression expression = new Expression("c+d");
