@@ -1069,6 +1069,8 @@ public class Expression {
      * @return <code>true</code>, if the input string is a number.
      */
     private boolean isNumber(String st) {
+        if(st == null || st.length() == 0)
+            return false;
         if(st.charAt(0) == minusSign && st.length() == 1)
             return false;
         if(st.charAt(0) == '+' && st.length() == 1)
@@ -1476,7 +1478,7 @@ public class Expression {
     public Expression setVariable(String variable, String value) {
         if(isNumber(value))
             variables.put(variable, CreateLazyNumber(new BigDecimal(value, mc)));
-        else if(value.equalsIgnoreCase("null")) {
+        else if("null".equalsIgnoreCase(value)) {
             variables.put(variable, null);
         } else {
             final String expStr = value;
