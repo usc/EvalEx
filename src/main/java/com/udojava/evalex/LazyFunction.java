@@ -44,7 +44,7 @@ public interface LazyFunction {
      *
      * @return The name of this function.
      */
-    public abstract String getName();
+    String getName();
 
     /**
      * Gets the number of parameters this function accepts.<br>
@@ -54,7 +54,7 @@ public interface LazyFunction {
      *
      * @return The number of parameters this function accepts.
      */
-    public abstract int getNumParams();
+    int getNumParams();
 
     /**
      * Gets whether the number of accepted parameters varies.<br>
@@ -64,7 +64,7 @@ public interface LazyFunction {
      *
      * @return <code>true</code> if the number of accepted parameters varies.
      */
-    public abstract boolean numParamsVaries();
+    boolean numParamsVaries();
 
     /**
      * Gets whether this function evaluates to a boolean expression.
@@ -72,7 +72,7 @@ public interface LazyFunction {
      * @return <code>true</code> if this function evaluates to a boolean
      * expression.
      */
-    public abstract boolean isBooleanFunction();
+    boolean isBooleanFunction();
 
     /**
      * Lazily evaluate this function.
@@ -80,5 +80,5 @@ public interface LazyFunction {
      * @param lazyParams The accepted parameters.
      * @return The lazy result of this function.
      */
-    public abstract LazyNumber lazyEval(List<LazyNumber> lazyParams);
+    LazyNumber lazyEval(List<LazyNumber> lazyParams);
 }

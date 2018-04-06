@@ -39,5 +39,5 @@ public interface Operator extends LazyOperator {
      * @param v2 Operand 2.
      * @return The result of the operation.
      */
-    public abstract BigDecimal eval(BigDecimal v1, BigDecimal v2);
+    BigDecimal eval(BigDecimal v1, BigDecimal v2);
 }

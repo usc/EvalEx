@@ -38,14 +38,14 @@ public interface LazyOperator {
      *
      * @return The String that is used to denote the operator in the expression.
      */
-    public abstract String getOper();
+    String getOper();
 
     /**
      * Gets the precedence value of this operator.
      *
      * @return the precedence value of this operator.
      */
-    public abstract int getPrecedence();
+    int getPrecedence();
 
     /**
      * Gets whether this operator is left associative (<code>true</code>) or if
@@ -53,7 +53,7 @@ public interface LazyOperator {
      *
      * @return <code>true</code> if this operator is left associative.
      */
-    public abstract boolean isLeftAssoc();
+    boolean isLeftAssoc();
 
     /**
      * Gets whether this operator evaluates to a boolean expression.
@@ -61,7 +61,7 @@ public interface LazyOperator {
      * @return <code>true</code> if this operator evaluates to a boolean
      * expression.
      */
-    public abstract boolean isBooleanOperator();
+    boolean isBooleanOperator();
 
     /**
      * Implementation for this operator.
@@ -70,5 +70,5 @@ public interface LazyOperator {
      * @param v2 Operand 2.
      * @return The result of the operation.
      */
-    public abstract LazyNumber eval(LazyNumber v1, LazyNumber v2);
+    LazyNumber eval(LazyNumber v1, LazyNumber v2);
 }
